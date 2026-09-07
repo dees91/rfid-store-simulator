@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scanner-emu"
+version = "0.1.0"
+description = "RFID Store Simulator: a first-person 3D store on top of a BLE RFID scanner emulator compatible with Nordic ID EXA51/EXA81 handhelds, for testing RFID inventory software without hardware"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+authors = [{ name = "Piotr Krawczyk" }]
+requires-python = ">=3.10"
+dependencies = ["bumble"]
+keywords = ["ble", "bluetooth", "emulator", "rfid", "nur", "bumble"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Hardware",
+]
+
+[project.urls]
+Homepage = "https://github.com/dees91/rfid-store-simulator"
+Repository = "https://github.com/dees91/rfid-store-simulator"
+Changelog = "https://github.com/dees91/rfid-store-simulator/blob/main/CHANGELOG.md"
+Issues = "https://github.com/dees91/rfid-store-simulator/issues"
+
+[project.scripts]
+scanner-emu = "scanner_emu.cli:main"
+scanner-emu-3d = "scanner_emu.three_d:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+scanner_emu = ["web_3d/*.html", "web_3d/*.css", "web_3d/*.js"]
+"scanner_emu.web_3d.vendor" = ["*.js", "*.txt"]

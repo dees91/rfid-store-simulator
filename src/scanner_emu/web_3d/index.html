@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RFID Store Simulator</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app" aria-label="RFID Store Simulator">
+      <section class="scene" aria-label="3D store">
+        <canvas id="store-canvas"></canvas>
+        <div class="reticle" aria-hidden="true">
+          <span></span>
+        </div>
+        <div id="progress-label" class="progress-label" hidden></div>
+        <div id="render-fallback" class="render-fallback" hidden>
+          WebGL is unavailable in this browser.
+        </div>
+        <div id="touch-fallback" class="touch-fallback" hidden>
+          Desktop browser required for this view.
+        </div>
+      </section>
+
+      <aside class="hud" aria-label="Runtime state">
+        <header class="hud-header">
+          <div>
+            <p class="eyebrow">RFID Store Simulator</p>
+            <h1>Scanner Bridge</h1>
+          </div>
+          <span id="connection-pill" class="pill is-warn">Connecting</span>
+        </header>
+
+        <div id="mismatch-banner" class="mismatch-banner" hidden>
+          Inventory still running after scan stopped.
+        </div>
+
+        <div class="state-row" aria-label="Scanner state">
+          <span id="backend-state" class="state-chip">Backend</span>
+          <span id="peer-state" class="state-chip">Peers</span>
+          <span id="trigger-state" class="state-chip">Trigger</span>
+          <span id="inventory-state" class="state-chip">Inventory</span>
+        </div>
+
+        <dl id="metrics" class="metrics">
+          <div><dt>Tags</dt><dd data-field="generated_tag_count">0</dd></div>
+          <div><dt>Accepted</dt><dd data-field="accepted_scan_count">0</dd></div>
+          <div><dt>Duplicates</dt><dd data-field="duplicate_ignored_count">0</dd></div>
+          <div><dt>Rate</dt><dd data-field="current_scan_rate">0/s</dd></div>
+          <div><dt>ID Buffer</dt><dd data-field="id_buffer_size">0</dd></div>
+          <div><dt>Mode</dt><dd data-field="mode">strict</dd></div>
+          <div><dt>Scanned</dt><dd data-field="progress_scanned_tags">0</dd></div>
+          <div><dt>Remaining</dt><dd data-field="progress_remaining_tags">0</dd></div>
+          <div><dt>Groups</dt><dd data-field="progress_group_summary">0 / 0</dd></div>
+          <div><dt>Complete</dt><dd data-field="progress_complete_groups">0</dd></div>
+        </dl>
+
+        <div class="progress-legend" aria-label="Scan progress legend">
+          <span><i class="legend-swatch is-unscanned"></i>Unscanned</span>
+          <span><i class="legend-swatch is-partial"></i>Partial</span>
+          <span><i class="legend-swatch is-complete"></i>Complete</span>
+        </div>
+
+        <div class="power-control" aria-label="Scanner power">
+          <div class="power-header">
+            <label for="scanner-power">Scanner Power</label>
+            <span id="scanner-power-value" class="power-value">3 Medium</span>
+          </div>
+          <input id="scanner-power" type="range" min="1" max="5" step="1" value="3">
+          <div class="power-scale" aria-hidden="true">
+            <span>Low</span>
+            <span>Max</span>
+          </div>
+          <div id="scanner-power-effect" class="power-effect">Previous max feel</div>
+        </div>
+
+        <button id="trigger-button" class="trigger-button" type="button">
+          <span class="trigger-icon" aria-hidden="true"></span>
+          <span data-trigger-label>Start Scan</span>
+        </button>
+      </aside>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

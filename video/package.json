@@ -1,0 +1,32 @@
+{
+  "name": "scanner-emu-readme-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproducible Remotion source for the RFID Store Simulator README demo and social preview",
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "studio": "remotion studio --no-open",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck",
+    "render": "remotion render ScannerEmuOverview out/demo-master.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --muted",
+    "social-preview": "remotion still ScannerEmuSocialPreview ../.github/assets/social-preview.png",
+    "gif": "./scripts/render-gif.sh",
+    "verify": "./scripts/verify-output.sh"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.509",
+    "@remotion/media": "4.0.509",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.509"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.13",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}

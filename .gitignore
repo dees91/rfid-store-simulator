@@ -1,0 +1,54 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Test, coverage, and tooling caches
+.coverage
+.coverage.*
+.hypothesis/
+.mypy_cache/
+.nox/
+.pytest_cache/
+.pyre/
+.ruff_cache/
+.tox/
+htmlcov/
+
+# Local interpreter and notebook state
+.python-version
+.ipynb_checkpoints/
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+
+# Remotion promo project
+video/node_modules/
+video/out/
+
+# Local catalogs and databases (demo catalogs are generated into /tmp)
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+!tests/*.csv
+
+# Large media are release assets, not tracked files
+docs/media/*.gif
+docs/media/*.mp4
+video/public/ui/*.mp4
