@@ -15,7 +15,7 @@ All notable user-facing changes are documented in this file.
   setup, catalog instructions, REPL commands, and configuration now live in
   the [operator guide](docs/usage.md).
 - README screenshots show scan progress before and after two passes; the
-  walkthrough link opens browser video playback instead of a file download.
+  walkthrough link points at the MP4 published with the `v0.1.0` release.
 
 ## [0.1.0] - 2026-09-07
 
