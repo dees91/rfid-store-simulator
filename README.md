@@ -7,7 +7,7 @@ without a physical scanner or tagged products.
   <img src="https://github.com/dees91/rfid-store-simulator/releases/download/v0.1.0/demo.gif" width="960" alt="RFID Store Simulator demo: scanning shelves in a 3D store, with scanned products turning green">
 </p>
 
-[Watch the full walkthrough](https://github.com/dees91/rfid-store-simulator/releases/download/v0.1.0/3d-store-demo.mp4) (MP4, 34 s)
+[Watch the full walkthrough](https://github.com/user-attachments/assets/e4692610-0e72-43b6-ac0c-5b171fd416f9) (34 s)
 
 [Quick start](#quick-start) | [How it works](#how-it-works) | [Connect your app](#connect-your-app) | [Documentation](#documentation--support)
 
