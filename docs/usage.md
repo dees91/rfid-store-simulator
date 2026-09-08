@@ -252,7 +252,8 @@ Real product data is never part of this repository.
 The same virtual controller was used to capture the README media. See the
 [media pipeline](../scripts/media/README.md) and
 [video project](../video/README.md) for reproduction instructions. GIF and
-MP4 files are release assets; screenshots are tracked in `docs/media/`.
+MP4 files are release assets; the README watch link uses an additional GitHub
+attachment for browser playback. Screenshots are tracked in `docs/media/`.
 
 ## REPL commands
 

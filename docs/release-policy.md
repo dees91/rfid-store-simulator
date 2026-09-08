@@ -79,4 +79,5 @@ releases unless behavior is unsafe or actively misleading.
     from the matching `CHANGELOG.md` section. Attach the sdist, the wheel,
     `SHA256SUMS.txt`, and the media assets `demo.gif` and `3d-store-demo.mp4`
     (they are not tracked in git; see `video/AGENTS.md`), then point the
-    README media links at the new tag.
+    README GIF at the new tag. If the walkthrough changed, update its browser
+    playback attachment and watch link as described in `scripts/media/README.md`.

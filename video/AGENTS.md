@@ -26,8 +26,9 @@ belong there, not scattered through scene code.
   (ignored by Git).
 - README GIF: `out/demo.gif`, infinite loop, at most 10 MiB. It is not
   tracked; upload it (and `docs/media/3d-store-demo.mp4`) as assets of the
-  release the README links to, then update the README link if the release
-  tag changed.
+  release the README links to, then update the README GIF link if the release
+  tag changed. The walkthrough watch link uses a repository-scoped GitHub
+  attachment for browser playback; see `../scripts/media/README.md`.
 - Social preview: `../.github/assets/social-preview.png`, 1280x640 PNG, at
   most 1 MiB.
 - The GIF script may lower frame rate, palette, or resolution in that
@@ -41,5 +42,7 @@ belong there, not scattered through scene code.
 4. `npm run social-preview && npm run gif && npm run verify`.
 5. Inspect the GIF at README size and the social preview at card size.
 6. Upload `out/demo.gif` and `docs/media/3d-store-demo.mp4` to the current
-   GitHub release and update the README links to that tag.
+   GitHub release and update the README GIF link to that tag. When the
+   walkthrough changes, also update its playback attachment and watch link
+   using the instructions in `../scripts/media/README.md`.
 7. Update the README when the product story changes.

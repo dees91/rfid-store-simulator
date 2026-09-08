@@ -55,3 +55,18 @@ The `-ss` offsets depend on how long the headless browser took to load; check
 a contact sheet (`ffmpeg -i in.webm -vf "fps=0.5,scale=320:-1,tile=7x4" -frames:v 1 sheet.png`)
 before trusting them. Then follow `video/README.md` to re-render the GIF and
 social preview.
+
+### Walkthrough playback link
+
+Keep the MP4 in the release as the downloadable copy. For the README's
+watch link, also upload the same MP4 as a GitHub attachment associated with
+this repository. The attachment endpoint serves `video/mp4`, allowing the
+browser to open its video player; release downloads are served as attachments.
+
+Use the stable `https://github.com/user-attachments/assets/...` URL in a
+labeled Markdown link, with the duration outside the link:
+`[Watch the full walkthrough](URL) (34 s)`. GitHub can turn a video link that
+occupies a whole paragraph into an embedded player; the separate duration
+keeps it a normal link. Do not save a temporary signed redirect URL in documentation.
+After replacing the video, open the watch link and check playback. The GIF
+continues to use its versioned release URL; neither video copy is tracked in Git.

@@ -22,3 +22,21 @@ macOS with Python 3.14.7. Compile checks, all 106 unit tests, and the API smoke
 test passed. The virtual-controller demo connected, accepted shelf scans,
 and stopped inventory from the browser. Reviewed rendered Markdown at 1280
 and 390 pixels; changed the flow diagram to a vertical layout for readability.
+
+## [2026-09-08] maintenance | Screenshots and browser video playback
+
+Accepted presentation change: the README now shows the existing synthetic
+aisle screenshots before scanning and after two passes. The walkthrough
+remains a normal link that opens the browser's video player on a separate page.
+
+Uploaded the unchanged release MP4 as a GitHub attachment associated with
+this repository. Verified `video/mp4` without an attachment disposition,
+1920x1080 playback for 34.17 seconds, and working browser playback controls.
+The release MP4 remains the downloadable copy; neither copy is tracked in Git.
+
+Verified GitHub rendering with repository context: a video link occupying a
+whole paragraph becomes an embedded player even with a custom label. Keeping
+the duration outside the watch link preserves a normal link. Updated media
+and release instructions to retain this behavior and use the stable attachment
+URL rather than its temporary signed redirect. Screenshots fit side by side
+at 1280 pixels and stack without page overflow at 390 pixels.
