@@ -27,7 +27,7 @@ priority than theoretical protocol completeness.
 
 Host-side compatibility facts (device-name filtering, connectable-only
 advertisements, no bonding, address-based pairing memory) are recorded in
-`README.md` (Host discovery notes). Keep this repo focused on the emulator
+`docs/usage.md` (Host discovery notes). Keep this repo focused on the emulator
 and record only the compatibility assumptions needed here.
 
 ## Protocol Notes

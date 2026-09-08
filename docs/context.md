@@ -85,7 +85,7 @@ maintained synthesis and open questions.
   a physical device on 2026-09-07. Details: `CHANGELOG.md`,
   `docs/wiki/log.md`, ADR `docs/decisions/0005-ble-host-on-physical-device.md`.
 - Host-side scanner discovery facts (name-based filtering, connectable-only,
-  no bonding, address-based pairing memory) are recorded in `README.md`
+  no bonding, address-based pairing memory) are recorded in `docs/usage.md`
   (Host discovery notes).
 - The repo uses `docs/wiki/` as an LLM-maintained synthesis layer. Future
   agents should update the wiki index and log when adding reusable synthesis or
@@ -99,7 +99,7 @@ maintained synthesis and open questions.
 - Feed/catalog API: `scanner_emu.product_catalog` and `scanner_emu.tag_feed`.
 - 3D store/session API: `scanner_emu.store_3d` and `scanner_emu.three_d`.
 - Config input: optional JSON passed with `--config`.
-- Documented REPL commands in `README.md`.
+- Documented REPL commands in `docs/usage.md`.
 - BLE/NUR behavior documented in `docs/nur-protocol.md`.
 
 ## Validation Commands
@@ -125,12 +125,13 @@ PY
 ## Source Material
 
 - `README.md`
+- `docs/usage.md`
 - `AGENTS.md`
 - `docs/nur-protocol.md`
 - `docs/emulator.md`
 - `https://github.com/google/bumble` and `https://github.com/NordicID/nur_sdk`
 - `src/scanner_emu/`
-- Host compatibility facts: `README.md` (Host discovery notes)
+- Host compatibility facts: `docs/usage.md` (Host discovery notes)
 
 Some docs cite an observed real-scanner handshake. No packet captures are
 part of this repository; use a task-provided capture when available.

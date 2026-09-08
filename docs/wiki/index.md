@@ -44,6 +44,7 @@ wiki pages are added, removed, renamed, or materially repurposed.
 ## Related Project Docs
 
 - `../README.md` - stable documentation index.
+- `../usage.md` - operator guide for app connections, catalogs, and commands.
 - `../nur-protocol.md` - protocol details.
 - `../emulator.md` - emulator behavior and known gaps.
 - `../release-policy.md` - release and compatibility policy.

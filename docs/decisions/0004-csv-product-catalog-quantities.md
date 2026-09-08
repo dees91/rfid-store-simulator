@@ -55,4 +55,4 @@ per-product splits from category-level numbers.
 - `src/scanner_emu/product_catalog.py`
 - `src/scanner_emu/store_3d.py`
 - `src/scanner_emu/three_d.py`
-- `README.md` "3D store simulator"
+- [3D store simulator](../usage.md#3d-store-simulator)

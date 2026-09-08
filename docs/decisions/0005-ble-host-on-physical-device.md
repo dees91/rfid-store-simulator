@@ -19,11 +19,11 @@ project still advertised a 3.9 floor.
   Bumble as `--transport usb:...`. The reference hardware is the ASUS
   USB-BT500 (Realtek RTL8761BU, USB `0b05:190e`), handled by Bumble's
   built-in Realtek driver with firmware from linux-firmware pinned by release
-  tag and checksum in `README.md`.
+  tag and checksum in `docs/usage.md`.
 - No emulator code changes are made for this path; `--transport` is passed
   through unchanged, and the advertising contract (connectable PDU, complete
   local name containing `EXA`, fixed static random address) already satisfies
-  the host discovery rules in `README.md` (Host discovery notes).
+  the host discovery rules in `docs/usage.md` (Host discovery notes).
 - The minimum Python version is raised to 3.10 in `pyproject.toml`, the
   entrypoint version guards, and all documentation.
 
@@ -39,7 +39,7 @@ project still advertised a 3.9 floor.
 ## Consequences
 
 - Operators need the one-time macOS setup (nvram switch behavior, firmware
-  download) documented in `README.md` "Physical device".
+  download) documented in `docs/usage.md` "Physical device".
 - Documentation carries a checksum-pinned firmware download that must be
   refreshed deliberately when moving to a newer linux-firmware release.
 - Environments on Python 3.9 stop at the entrypoint guard with an explicit
@@ -47,6 +47,7 @@ project still advertised a 3.9 floor.
 
 ## Related
 
-- `README.md` "Physical device" and "Host discovery notes"
+- [Physical device](../usage.md#physical-device) and
+  [Host discovery notes](../usage.md#host-discovery-notes)
 - `docs/emulator.md` "Common Failure Modes"
 - `docs/wiki/topics/operator-workflows.md` "Physical Device"

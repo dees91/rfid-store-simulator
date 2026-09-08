@@ -535,7 +535,7 @@ PY
 ```
 
 Manual emulator run (Android emulator, or `--transport usb:0` for a BLE host
-on a physical device after the README "Physical device" setup):
+on a physical device after the [physical-device setup](./usage.md#physical-device)):
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m scanner_emu run --transport android-netsim --model exa51

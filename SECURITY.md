@@ -4,7 +4,7 @@ RFID Store Simulator is a local development tool. It opens a BLE peripheral on a
 local controller and, for the 3D simulator, a local HTTP server bound to
 `127.0.0.1` by default. It does not contact any network service on its own.
 The only outbound network access is the one-time firmware download that the
-README asks you to run manually.
+[operator guide](docs/usage.md#physical-device) asks you to run manually.
 
 ## Reporting a Vulnerability
 

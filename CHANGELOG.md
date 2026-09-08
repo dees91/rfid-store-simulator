@@ -4,7 +4,11 @@ All notable user-facing changes are documented in this file.
 
 ## [Unreleased]
 
-Nothing yet.
+### Changed
+
+- Shorter README with a hardware-free demo quick start; detailed Bluetooth
+  setup, catalog instructions, REPL commands, and configuration now live in
+  the [operator guide](docs/usage.md).
 
 ## [0.1.0] - 2026-09-07
 

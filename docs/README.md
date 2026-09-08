@@ -1,8 +1,15 @@
 # RFID Store Simulator Docs
 
-This directory collects the current state of knowledge about the EXA/NUR BLE protocol subset used by connected NUR hosts and about the local emulator implementation.
+Start with the [README quick start](../README.md#quick-start) to try the 3D
+store without hardware. These guides cover app integration, the supported
+EXA/NUR protocol subset, and emulator internals.
 
 ## Documents
+
+- [Operator Guide](./usage.md)
+  - Android emulator and physical-device setup
+  - CSV catalogs, 3D controls, and scan behavior
+  - REPL commands, JSON configuration, and troubleshooting links
 
 - [Context](./context.md)
   - compact current project facts
@@ -53,4 +60,4 @@ The docs intentionally distinguish between:
 - Nordic ID NUR SDK: `https://github.com/NordicID/nur_sdk`
 - Bumble: `https://github.com/google/bumble`
 - `src/scanner_emu/`
-- `README.md` (Host discovery notes)
+- [Host discovery notes](./usage.md#host-discovery-notes)

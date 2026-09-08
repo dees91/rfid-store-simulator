@@ -66,13 +66,14 @@ releases unless behavior is unsafe or actively misleading.
 1. Confirm the working tree is clean or intentionally staged.
 2. Run `.venv/bin/python -m compileall src` and
    `PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -t .`.
-3. Run the lightweight API smoke test from `README.md`.
+3. Run the lightweight API smoke test from `docs/context.md`.
 4. Smoke-check the main CLI flow against `android-netsim` when available.
 5. Smoke-check `scanner-emu-3d` and the browser smoke test when the 3D UI
    changed.
 6. Check connected-host compatibility for BLE/NUR changes.
 7. Review `CHANGELOG.md`.
-8. Review `README.md`, `NOTICE.md`, license status, and redistribution notes.
+8. Review `README.md`, `docs/usage.md`, `NOTICE.md`, license status, and
+   redistribution notes.
 9. Run public-safety checks for secrets, device captures, and local artifacts.
 10. Tag the release (`vX.Y.Z`, annotated) and create GitHub release notes
     from the matching `CHANGELOG.md` section. Attach the sdist, the wheel,

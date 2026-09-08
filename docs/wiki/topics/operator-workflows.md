@@ -2,8 +2,9 @@
 
 ## Status
 
-Current synthesis from README, emulator docs, and CLI/3D UI structure as of
-2026-09-07 (CSV catalog with per-product quantities).
+Current synthesis from the operator guide, emulator docs, and CLI/3D UI
+structure as of 2026-09-07 (CSV catalog with per-product quantities).
+Documentation links refreshed on 2026-09-08; runtime behavior is unchanged.
 
 ## CLI
 
@@ -13,7 +14,8 @@ Run directly from this checkout:
 PYTHONPATH=src .venv/bin/python -m scanner_emu run --transport android-netsim --model exa51
 ```
 
-Or use the installed entrypoint (Python `3.10+`, see README "Install"):
+Or use the installed entrypoint (Python `3.10+`, see the
+[README installation steps](../../../README.md#1-install)):
 
 ```bash
 .venv/bin/scanner-emu run --transport android-netsim --model exa51
@@ -32,12 +34,13 @@ Bumble cannot use the Mac's built-in Bluetooth. The validated controller is
 ASUS USB-BT500 (Realtek RTL8761BU, USB `0b05:190e`), used as
 `--transport usb:0` with every entrypoint (`scanner-emu`, `scanner-emu-3d`).
 
-Operator sequence (details and exact commands in README "Physical device"):
+Operator sequence (details in the
+[physical-device guide](../../usage.md#physical-device)):
 
 - once: `sudo nvram bluetoothHostControllerSwitchBehavior="never"`, re-plug;
 - once: download `rtl8761bu_fw.bin` into Bumble's Realtek firmware directory
   (`bumble-rtk-fw-download` is broken in Bumble 0.0.234, use the direct
-  linux-firmware download from the README);
+  linux-firmware download from the operator guide);
 - check: `bumble-usb-probe`, then `bumble-controller-info usb:0`;
 - run any entrypoint with `--transport usb:0`;
 - on the host: search for `EXA51-EMU`, pair; re-pair after any `--address`
@@ -115,7 +118,7 @@ treat it as the protocol compatibility path.
 ## Config
 
 Use `--config path/to/state.json` to override initial state. Known fields are
-documented in `README.md`; keep loading tolerant when adding fields.
+documented in `docs/usage.md`; keep loading tolerant when adding fields.
 
 ## Operator Actions
 

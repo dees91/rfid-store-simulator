@@ -21,7 +21,7 @@ captures into this repository.
 - Two transports are supported operationally: `android-netsim` for the
   Android emulator and `usb:0` for a BLE host on a physical device through a
   dedicated USB HCI dongle (validated with ASUS USB-BT500 /
-  Realtek RTL8761BU on macOS). See `README.md` "Physical device".
+  Realtek RTL8761BU on macOS). See `docs/usage.md` "Physical device".
 - Do not vendor Bumble or the NUR SDK into this repository; reference upstream
   instead.
 - The operator UI is the browser-based 3D store simulator served by
@@ -32,7 +32,8 @@ captures into this repository.
 
 Start here:
 
-- `README.md` - public orientation, install/run commands, operator commands.
+- `README.md` - public orientation, installation, and hardware-free quick start.
+- `docs/usage.md` - app connection setup, catalogs, operator commands, and config.
 - `docs/context.md` - compact current context and accepted working facts.
 - `docs/README.md` - stable docs index.
 - `docs/wiki/index.md` - LLM-maintained synthesis index.
@@ -166,7 +167,7 @@ For manual runs:
 PYTHONPATH=src .venv/bin/python -m scanner_emu run --transport android-netsim --model exa51
 ```
 
-BLE host on a physical device through the USB dongle (setup steps in `README.md`):
+BLE host on a physical device through the USB dongle (setup steps in `docs/usage.md`):
 
 ```bash
 .venv/bin/scanner-emu run --transport usb:0 --model exa51
