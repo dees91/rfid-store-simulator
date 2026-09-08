@@ -4,6 +4,11 @@ All notable user-facing changes are documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Issue templates for bug reports and compatibility reports, both stating
+  that catalogs, captures, and inventory data must be synthetic.
+
 ### Changed
 
 - Shorter README with a hardware-free demo quick start; detailed Bluetooth

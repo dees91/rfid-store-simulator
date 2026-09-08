@@ -1,0 +1,60 @@
+name: Bug report
+description: Something in the emulator, 3D store, or CLI does not work as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste real product catalogs, inventory exports, or captures from
+        real scanners. Reduce the problem to synthetic data first; the demo
+        catalog from `scripts/media/make_demo_catalog.py` is a good starting
+        point.
+
+        For security problems, do not open an issue. Follow
+        [SECURITY.md](https://github.com/dees91/rfid-store-simulator/blob/main/SECURITY.md) instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands you ran, including transport and model flags.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Emulator log lines or browser console errors. Redact anything private.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "Release tag, or `git rev-parse --short HEAD` for a source checkout."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS and Python version
+      placeholder: "macOS 15.5, Python 3.13.13"
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport
+      options:
+        - tcp-client (virtual controller, no hardware)
+        - android-netsim (Android emulator)
+        - usb:0 (USB Bluetooth dongle)
+        - Not applicable
+    validations:
+      required: true

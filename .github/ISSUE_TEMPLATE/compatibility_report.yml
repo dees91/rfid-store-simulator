@@ -1,0 +1,49 @@
+name: Compatibility report
+description: Your app or a real scanner behaves differently than the emulator.
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only a subset of NUR is implemented; see
+        [supported commands](https://github.com/dees91/rfid-store-simulator/blob/main/docs/nur-protocol.md#supported-commands)
+        and [known differences](https://github.com/dees91/rfid-store-simulator/blob/main/docs/emulator.md#known-differences-vs-real-hardware)
+        before reporting.
+
+        Describe frames and behavior, not captures. Do not attach traffic dumps
+        from real devices, real inventory data, or anything copied from a
+        vendor SDK.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What a real scanner or your app does.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Emulator behavior
+      description: What the emulator does instead.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: NUR command or event
+      description: Which command, response, or unsolicited event is involved.
+  - type: dropdown
+    id: model
+    attributes:
+      label: Emulated model
+      options:
+        - EXA51
+        - EXA81
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host application
+      description: The app or SDK talking to the emulator, and how it connects.

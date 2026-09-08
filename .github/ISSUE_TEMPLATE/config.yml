@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/dees91/rfid-store-simulator/security/advisories/new
+    about: Report privately through a security advisory. Never in a public issue.
+  - name: Documentation
+    url: https://github.com/dees91/rfid-store-simulator/blob/main/docs/README.md
+    about: Operator guide, protocol notes, troubleshooting, and known limitations.
